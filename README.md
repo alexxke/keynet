@@ -20,6 +20,8 @@ This repository introduces a dataset of obverse and reverse images of 319 unique
 
    3. Zenodo
 
+   4. Mendeley Data
+
 2. Load the dataset
 
    ```python
@@ -54,7 +56,7 @@ Our camera natively captures $3024 \times 4032$ px JPEG images, which were manua
 
 #### Schema
 
-We make our data accessible in an HDF5 format, through arrays are aligned where the $n$th index of each array represents the $n$th key, with keys sorted ascending by bitting code:
+We make our data accessible in an HDF5 format, through arrays are aligned where the Nth index of each array represents the Nth key, with keys sorted ascending by bitting code:
 
 - `/bittings`: Each keys 1-9 bitting code, recorded from shoulder through the tip of the key, `uint8` of shape $(319, 5)$.
 - `/obverse`: Obverse image of each key, `uint8` of shape $(319, 512, 512, 3)$.
@@ -81,7 +83,7 @@ If KeyDB was useful in your research, please consider citing:
 ```bibtex
 @misc{ke2023keydb,
   title={KeyDB: An Open Source Dataset of Key Bittings},
-  author={Alexander Ke},
+  author={Ke, Alexander and Chan, Lydia and Yu, To Chin},
   year={2023},
   journal={GitHub repository},
   publisher={GitHub},

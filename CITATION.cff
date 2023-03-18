@@ -3,6 +3,12 @@ message: "If you use this dataset, please cite it as below."
 authors:
   - family-names: "Ke"
     given-names: "Alexander"
+    orcid: "https://orcid.org/0009-0005-7415-9860"
+  - family-names: "Chan"
+    given-names: "Lydia"
+  - family-names: "Yu"
+    given-names: "To Chin"
+    orcid: "https://orcid.org/0000-0002-8009-2931"
 title: "KeyNet"
 version: 1.0.0
 doi: <add Zenodo DOI here>
