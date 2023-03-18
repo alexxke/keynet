@@ -85,6 +85,7 @@ If KeyNet was useful in your research, please consider citing:
   year={2023},
   journal={GitHub repository},
   publisher={GitHub},
+  doi={10.5281/zenodo.7749369},
   url={https://github.com/alexxke/keynet.git}
 }
 ```
