@@ -79,7 +79,7 @@ Public data are distributed under the [Creative Commons Attribution 4.0 Internat
 If KeyDB was useful in your research, please consider citing:
 
 ```bibtex
-@techreport{ke2023keydb,
+@misc{ke2023keydb,
   title={KeyDB: An Open Source Dataset of Key Bittings},
   author={Alexander Ke},
   year={2023},
