@@ -2,7 +2,7 @@
 
 This repository introduces a dataset of obverse and reverse images of 319 unique Schlage SC1 keys, labeled with each key's bitting code.
 
-![schema](.\schema.svg)
+![schema](schema.svg)
 
 
 
