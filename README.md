@@ -1,4 +1,4 @@
-# KeyDB: An Open Source Dataset of Key Bittings
+# KeyNet: An Open Source Dataset of Key Bittings
 
 This repository introduces a dataset of obverse and reverse images of 319 unique Schlage SC1 keys, labeled with each key's bitting code.
 
@@ -13,7 +13,7 @@ This repository introduces a dataset of obverse and reverse images of 319 unique
    1. Install `git-lfs` ([instructions](https://github.com/git-lfs/git-lfs/wiki/Installation)), and clone as usual:
 
       ```bash
-      git clone https://github.com/alexxke/keydb.git
+      git clone https://github.com/alexxke/keynet.git
       ```
 
    2. Kaggle
@@ -28,17 +28,17 @@ This repository introduces a dataset of obverse and reverse images of 319 unique
    import h5py
    import numpy as np
    
-   keydb = h5py.File('keydb.h5', 'r')
-   bittings = np.asarray(keydb['bittings'])
-   obverse = np.asarray(keydb['obverse'])
-   reverse = np.asarray(keydb['reverse'])
+   keynet = h5py.File('keynet.h5', 'r')
+   bittings = np.asarray(keynet['bittings'])
+   obverse = np.asarray(keynet['obverse'])
+   reverse = np.asarray(keynet['reverse'])
    ```
 
 
 
 ## Motivation
 
-We created this dataset for a course project building an end to end system for authorized users to decode key bittings from images. KeyDB is, to the best of our knowledge, the largest public dataset of keys labeled with their bitting codes.
+We created this dataset for a course project building an end to end system for authorized users to decode key bittings from images. KeyNet is, to the best of our knowledge, the largest public dataset of keys labeled with their bitting codes.
 
 Pin and tumbler locks are ubiquitous and skilled locksmiths are able to copy keys from images. Software that seeks to make the process more accessible relies on external landmarks (such as a credit card) in the image to determine distances and decode the key using measurements. However, the key's own dimensions provides such a measurement, and we hope the release of this dataset will catalyze the development of such systems.
 
@@ -62,7 +62,7 @@ We make our data accessible in an HDF5 format, through arrays are aligned where 
 - `/obverse`: Obverse image of each key, `uint8` of shape $(319, 512, 512, 3)$.
 - `/reverse`: Reverse image of each key, `uint8` of shape $(319, 512, 512, 3)$.
 
-#### KeyDB Is Not a Random Sample of Keys
+#### KeyNet Is Not a Random Sample of Keys
 
 Schlage SC1 keys have a Maximum Adjacent Cut Specification (MACS) of 7, meaning adjacent bittings cannot have difference more than 7. In practice, deep cuts near the shoulder of the key are avoided to maintain the key's strength, so the first bitting should be 2-9. Factory-cut Schlage SC1 keys do not use the 0 bitting. To make the lock harder pick, locksmiths also avoid too many equal consecutive bittings (we enforce no more than three equal consecutive bittings).
 
@@ -78,16 +78,16 @@ Public data are distributed under the [Creative Commons Attribution 4.0 Internat
 
 ## Citing
 
-If KeyDB was useful in your research, please consider citing:
+If KeyNet was useful in your research, please consider citing:
 
 ```bibtex
-@misc{ke2023keydb,
-  title={KeyDB: An Open Source Dataset of Key Bittings},
+@misc{ke2023keynet,
+  title={KeyNet: An Open Source Dataset of Key Bittings},
   author={Ke, Alexander and Chan, Lydia and Yu, To Chin},
   year={2023},
   journal={GitHub repository},
   publisher={GitHub},
-  url={https://github.com/alexxke/keydb.git}
+  url={https://github.com/alexxke/keynet.git}
 }
 ```
 
